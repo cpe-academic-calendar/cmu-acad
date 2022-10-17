@@ -1,40 +1,45 @@
 import * as React from "react";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutlined";
-
+import { SlDoc, SlArrowDown } from "react-icons/sl";
 import {
-  NavButton,
-  NavBarSt,
-  ButtonSave,
-  BackButton,
-} from "../SettingCalendar/SearchBar.styled";
-import { DraftComponent, InsertFile } from "./DraftYear.styled";
+  ArrowDown,
+  CalendarIcon,
+  CalendarIconName,
+  DraftComponent,
+  FileComponent,
+  NavBarContainer,
+  NavBarDraft,
+} from "./DraftYear.styled";
 import Draft from "../../Components/Draft";
-
+import { orange } from "@mui/material/colors";
 
 class DraftYear extends React.Component {
-  render(){
+  render() {
     return (
       <div>
-        <NavBarSt>
-          <InsertFile>
-            <InsertDriveFileOutlinedIcon />
-          </InsertFile>
-          <NavButton>
-            <BackButton>
-              {" "}
-              Back
-              <ButtonSave>Save Changes</ButtonSave>
-            </BackButton>
-            <CalendarTodayOutlinedIcon />
-          </NavButton>
-        </NavBarSt>
+        <NavBarDraft>
+          <NavBarContainer>
+            <FileComponent>
+              <SlDoc style={{ fontSize: 40, color: "#f57f17" }} />
+              <ArrowDown>
+                <SlArrowDown style={{ fontSize: 15, color: "#f57f17" }} />
+              </ArrowDown>
+            </FileComponent>
+            <CalendarIcon>
+              <CalendarTodayOutlinedIcon
+                style={{ fontSize: 40, color: "#f57f17" }}
+              />
+              <CalendarIconName>ปฏิทิน</CalendarIconName>
+            </CalendarIcon>
+          </NavBarContainer>
+        </NavBarDraft>
         <DraftComponent>
-        <Draft />
+          <Draft />
         </DraftComponent>
       </div>
     );
   }
-};
+}
 
 export default DraftYear;

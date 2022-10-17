@@ -10,7 +10,6 @@ import EventEdit from './Components/Events';
 import EventInfo from './Components/EventsInfo';
 import Activity from './Components/Activity';
 import DayPopUp from './Components/DayPopUp';
-import Draft from './Components/Draft';
 
 const GobalStyle = createGlobalStyle`
   font-family: 'Roboto', sans-serif;
@@ -25,7 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ChooseCalendar />} />
           <Route path="/setting" element={<SettingCalendar />} />
-          <Route path="/DraftYear" element={<Draft />}/>
+          <Route path="/DraftYear" element={<DraftYear />}/>
           <Route path="Event" element={<EventEdit />} />
           <Route path="Info" element={<EventInfo />} />
           <Route path="/activity" element={<Activity />} />
