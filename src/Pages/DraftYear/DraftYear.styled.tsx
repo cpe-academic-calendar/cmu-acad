@@ -43,3 +43,20 @@ color: #F57F17;
 `;
 
 export const CalendarIconName = styled(ArrowDown)``
+
+export const TypeButton = styled.div`
+  display: flex;
+`
+
+export const NavMonButton = styled.div`
+width: 57px;
+height: 50px;
+background: #F57F17;
+box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+text-align: center;
+padding: 23px 23px 23px 23px;
+`
+
+export const NavYearButton = styled(NavMonButton)`
+`

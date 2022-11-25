@@ -1,6 +1,5 @@
 import * as React from "react";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutlined";
 import { SlDoc, SlArrowDown } from "react-icons/sl";
 import {
   ArrowDown,
@@ -10,9 +9,9 @@ import {
   FileComponent,
   NavBarContainer,
   NavBarDraft,
+  TypeButton,
 } from "./DraftYear.styled";
 import Draft from "../../Components/Draft";
-import { orange } from "@mui/material/colors";
 
 class DraftYear extends React.Component {
   render() {
@@ -32,6 +31,8 @@ class DraftYear extends React.Component {
               />
               <CalendarIconName>ปฏิทิน</CalendarIconName>
             </CalendarIcon>
+            <TypeButton>
+            </TypeButton>
           </NavBarContainer>
         </NavBarDraft>
         <DraftComponent>
