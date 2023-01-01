@@ -21,13 +21,10 @@ const AddCalendar: React.FC = () => {
                         <div >
                             <FormInput type="text" name="name" className="border rounded-full mb-3 p-2 " placeholder="ชื่อปฏิทิน" />
                         </div>
-                        <div>
+                        <div className="mb-3">
                             <FormInput type="text" name="name" className="border rounded-full mb-3 p-2" placeholder="ปีการศึกษา" />
                         </div>
-                        <SemesterTitle className="mb-3">วันแรกของการเปิดการศึกษา</SemesterTitle>
-                        <div >
-                            <FormInput type="text" name="name" className="border rounded-full mb-6 p-2" placeholder="ปีการศึกษา" />
-                        </div>
+                        <SemesterTitle className="mb-6">วันแรกของการเปิดการศึกษา</SemesterTitle>
                         <div className="flex-col justify-center ">
                             <div className="flex w-full justify-center gap-8">
                                 <div className="w-full">

@@ -7,6 +7,9 @@ import NavBar from "../../Components/NavBar";
 import CalendarActiveList from "./Components/CalendarActiveList";
 import CalendarArchiveList from "./Components/CalendarArchiveList";
 import styled from "styled-components";
+import { Reset } from "../../Styles/Reset";
+import { Font } from "../../Styles/Font";
+import Variables from "../../Styles/Variables";
 
 function ChooseCalendar() {
     const [calendarSort, setCalendarSort] = useState<String>('Active')
@@ -17,8 +20,8 @@ function ChooseCalendar() {
     let render_list = null;
     let sort_button = null;
 
-    switch (calendarSort){
-        case "Active" :
+    switch (calendarSort) {
+        case "Active":
             render_list = <CalendarActiveList />
             sort_button = <>
                 <CalendarSortButton>
@@ -31,50 +34,50 @@ function ChooseCalendar() {
                 </CalendarSortButton>
             </>
             break;
-        case "Archive" :
+        case "Archive":
             render_list = <CalendarArchiveList />
             sort_button = <>
-            <CalendarSortButton>
-                <div className="items" onClick={() => setSort("Active")}>
-                    <p>ปฏิทินทั้งหมด</p>
-                </div>
-                <div className="select" onClick={() => setSort("Archive")}>
-                    <p>ที่จัดเก็บ</p>
-                </div>
-            </CalendarSortButton>
-        </>
+                <CalendarSortButton>
+                    <div className="items" onClick={() => setSort("Active")}>
+                        <p>ปฏิทินทั้งหมด</p>
+                    </div>
+                    <div className="select" onClick={() => setSort("Archive")}>
+                        <p>ที่จัดเก็บ</p>
+                    </div>
+                </CalendarSortButton>
+            </>
             break;
     }
-    return ( 
+    return (
         <>
-        <NavBar />
-        <Container>
-        {sort_button}
-        <TableCardHeader>
+            <NavBar />
+            <Container>
+                {sort_button}
+                <TableCardHeader>
                     <InsertDriveFileOutlinedIcon color="action" />
-                        <p>ชื่อ</p>
+                    <p>ชื่อ</p>
                     <div className="end">
                         <p>วันที่สร้าง</p>
                         <p>แก้ไขล่าสุด</p>
-                    {
-                        iconMenu?
-                        <div className='active-icon'>
-                                <DeleteIcon />
-                                <FolderIcon />
-                        </div>
-                        :
-                        <div className='disable-icon'>
-                                <DeleteIcon />
-                                <FolderIcon />
-                        </div>
-                    }
+                        {
+                            iconMenu ?
+                                <div className='active-icon'>
+                                    <DeleteIcon />
+                                    <FolderIcon />
+                                </div>
+                                :
+                                <div className='disable-icon'>
+                                    <DeleteIcon />
+                                    <FolderIcon />
+                                </div>
+                        }
                     </div>
-            </TableCardHeader>
-        {render_list}
-        </Container>
-        <NewCalendarButton>+</NewCalendarButton>  
+                </TableCardHeader>
+                {render_list}
+            </Container>
+            <NewCalendarButton>+</NewCalendarButton>
         </>
-     );
+    );
 }
 
 const NewCalendarButton = styled.button`

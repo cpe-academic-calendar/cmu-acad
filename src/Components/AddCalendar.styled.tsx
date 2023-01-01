@@ -11,7 +11,6 @@ export const AddContainer = styled.div`
 `
 
 export const Header = styled.div`
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
     font-size: 22px;
@@ -20,7 +19,6 @@ export const Header = styled.div`
 
 export const Title = styled.div`
     margin-top: -8px;
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -28,7 +26,6 @@ export const Title = styled.div`
 `
 
 export const SemesterTitle = styled(Title)`
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -37,7 +34,7 @@ export const SemesterTitle = styled(Title)`
 
 export const CloseButton = styled.button`
     color: #F57F17;
-    transform: scale(180%);
+    transform: scale(120%);
 `
 
 export const CreateButton = styled.input`
