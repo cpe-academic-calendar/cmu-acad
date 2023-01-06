@@ -16,6 +16,7 @@ import Variables from './Styles/Variables';
 import ExportPopUP from './Components/ExportPopUp';
 import Modal from './Components/UI/Modal';
 import AddCalendar from './Components/AddCalendar';
+import ConditionEdit from './Components/ConditionEdit';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
           <Route path="/activity" element={<Activity />} />
           <Route path="/popup" element={<DayPopUp/>} />
           <Route path="/addcalendar" element={<AddCalendar />} />
+          <Route path="/condition-edit" element={<ConditionEdit />} />
         </ Routes>
       </ BrowserRouter>
     </div>

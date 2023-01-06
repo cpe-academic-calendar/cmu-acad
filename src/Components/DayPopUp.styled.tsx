@@ -29,7 +29,6 @@ export const Header = styled.div`
     margin-left: 20px;
 `
 export const HeaderInfo = styled.div`
-  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
